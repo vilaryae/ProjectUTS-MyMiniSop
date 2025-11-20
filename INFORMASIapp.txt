@@ -1,0 +1,265 @@
+INFORMASI APLIKASI MYSHOP MINI
+===============================
+
+Aplikasi MyShop Mini adalah aplikasi e-commerce sederhana yang dibangun menggunakan Flutter framework. Berikut adalah dokumentasi lengkap widget-widget yang digunakan dalam membangun aplikasi ini beserta fungsi masing-masing.
+
+================================================================================
+WIDGET UTAMA (MAIN WIDGETS)
+================================================================================
+
+1. MaterialApp
+   - Fungsi: Widget root aplikasi Flutter yang menyediakan konfigurasi aplikasi seperti tema, routing, dan localization
+   - Lokasi: main.dart
+   - Parameter penting: title, theme, home, routes
+
+2. Scaffold
+   - Fungsi: Struktur dasar layout halaman dengan AppBar, body, drawer, dll
+   - Lokasi: Semua screen (home_screen.dart, about_screen.dart, dll)
+   - Komponen: appBar, body, drawer, floatingActionButton
+
+================================================================================
+WIDGET LAYOUT (LAYOUT WIDGETS)
+================================================================================
+
+3. Container
+   - Fungsi: Widget container yang fleksibel untuk styling, padding, margin, dan dekorasi
+   - Lokasi: Hampir semua file
+   - Penggunaan: Background gradient, padding, decoration
+
+4. Column
+   - Fungsi: Mengatur children secara vertikal (atas ke bawah)
+   - Lokasi: Semua screen untuk layout utama
+
+5. Row
+   - Fungsi: Mengatur children secara horizontal (kiri ke kanan)
+   - Lokasi: Header sections, button layouts
+
+6. Padding
+   - Fungsi: Menambahkan padding di sekitar child widget
+   - Lokasi: Hampir semua container dan card
+
+7. SizedBox
+   - Fungsi: Memberikan spacing tetap antara widget
+   - Lokasi: Untuk memberikan jarak vertikal/horizontal
+
+8. Expanded
+   - Fungsi: Membuat child mengisi ruang yang tersedia
+   - Lokasi: Dalam Column/Row untuk layout responsif
+
+9. Center
+   - Fungsi: Memusatkan child widget di tengah parent
+   - Lokasi: Empty states, header sections
+
+================================================================================
+WIDGET NAVIGASI (NAVIGATION WIDGETS)
+================================================================================
+
+10. AppBar
+    - Fungsi: Header aplikasi dengan title dan actions
+    - Lokasi: Semua screen
+    - Parameter: title, backgroundColor, elevation
+
+11. Drawer
+    - Fungsi: Panel samping untuk navigasi menu
+    - Lokasi: AppDrawer class di home_screen.dart
+
+12. ListTile
+    - Fungsi: Item menu dalam drawer dengan icon dan text
+    - Lokasi: AppDrawer
+    - Parameter: leading (icon), title, onTap
+
+13. Navigator
+    - Fungsi: Mengelola routing antar halaman
+    - Lokasi: onTap handlers di seluruh aplikasi
+    - Method: push(), pushReplacementNamed(), pop()
+
+================================================================================
+WIDGET TAMPILAN (DISPLAY WIDGETS)
+================================================================================
+
+14. Text
+    - Fungsi: Menampilkan teks dengan styling
+    - Lokasi: Hampir semua tempat
+    - Parameter: style (fontSize, fontWeight, color), textAlign, maxLines
+
+15. Icon
+    - Fungsi: Menampilkan ikon material design
+    - Lokasi: Drawer items, product icons, empty states
+    - Parameter: icon (Icons.xxx), size, color
+
+16. Image.asset
+    - Fungsi: Menampilkan gambar dari assets
+    - Lokasi: Logo aplikasi, product images
+    - Parameter: image path, fit, width, height
+
+17. Image.network
+    - Fungsi: Menampilkan gambar dari URL
+    - Lokasi: Product images (jika dari internet)
+
+18. FlutterLogo
+    - Fungsi: Logo resmi Flutter
+    - Lokasi: About screen untuk menunjukkan teknologi
+
+================================================================================
+WIDGET INTERAKTIF (INTERACTIVE WIDGETS)
+================================================================================
+
+19. GestureDetector
+    - Fungsi: Mendeteksi gesture seperti tap pada widget
+    - Lokasi: Product cards, category items
+    - Parameter: onTap, child
+
+20. ElevatedButton.icon
+    - Fungsi: Button dengan icon dan text
+    - Lokasi: Product detail screen (add to cart)
+    - Parameter: onPressed, icon, label, style
+
+21. IconButton
+    - Fungsi: Button berbentuk icon
+    - Lokasi: Favorite button di product detail
+
+================================================================================
+WIDGET SCROLLING (SCROLLING WIDGETS)
+================================================================================
+
+22. SingleChildScrollView
+    - Fungsi: Membuat content dapat di-scroll
+    - Lokasi: About screen, Product detail screen
+    - Parameter: padding, child
+
+23. GridView.builder
+    - Fungsi: Membuat grid layout dengan builder
+    - Lokasi: Product list, Favorites screen
+    - Parameter: gridDelegate, itemCount, itemBuilder
+
+24. ListView.separated
+    - Fungsi: List dengan separator
+    - Lokasi: Home screen categories
+
+================================================================================
+WIDGET MATERIAL DESIGN (MATERIAL WIDGETS)
+================================================================================
+
+25. Card
+    - Fungsi: Container dengan elevation dan shadow
+    - Lokasi: Product cards, info sections
+    - Parameter: elevation, shadowColor, shape, child
+
+26. ClipRRect
+    - Fungsi: Memotong child dengan border radius
+    - Lokasi: Product images
+    - Parameter: borderRadius, child
+
+27. DrawerHeader
+    - Fungsi: Header khusus untuk drawer
+    - Lokasi: AppDrawer
+    - Parameter: decoration, child
+
+================================================================================
+WIDGET STATE MANAGEMENT (STATE WIDGETS)
+================================================================================
+
+28. StatefulWidget
+    - Fungsi: Widget dengan state yang dapat berubah
+    - Lokasi: FavoritesScreen (untuk mengelola list favorit)
+
+29. StatelessWidget
+    - Fungsi: Widget tanpa state
+    - Lokasi: Kebanyakan screen (HomeScreen, AboutScreen, dll)
+
+================================================================================
+WIDGET RESPONSIVE & THEMING (RESPONSIVE & THEMING WIDGETS)
+================================================================================
+
+30. MediaQuery
+    - Fungsi: Mendapatkan informasi ukuran layar
+    - Lokasi: Semua screen untuk responsive design
+    - Penggunaan: MediaQuery.of(context).size
+
+31. Theme
+    - Fungsi: Mengakses tema aplikasi
+    - Lokasi: primaryColor, accentColor
+    - Penggunaan: Theme.of(context).primaryColor
+
+================================================================================
+WIDGET DEKORASI (DECORATION WIDGETS)
+================================================================================
+
+32. BoxDecoration
+    - Fungsi: Mendekorasi container dengan color, border, shadow
+    - Lokasi: Container decorations
+    - Parameter: color, borderRadius, gradient, boxShadow
+
+33. LinearGradient
+    - Fungsi: Membuat gradient linear
+    - Lokasi: Background screens, card decorations
+    - Parameter: colors, begin, end
+
+34. BoxShadow
+    - Fungsi: Menambahkan shadow pada widget
+    - Lokasi: Card elevations, image containers
+    - Parameter: color, blurRadius, offset
+
+================================================================================
+WIDGET KHUSUS APLIKASI (CUSTOM WIDGETS)
+================================================================================
+
+35. AppDrawer
+    - Fungsi: Drawer navigasi yang konsisten di semua halaman
+    - Lokasi: home_screen.dart (digunakan di semua screen)
+    - Komponen: DrawerHeader dengan logo, ListTile untuk menu
+
+36. _drawerItem (static method)
+    - Fungsi: Helper method untuk membuat item drawer
+    - Lokasi: AppDrawer
+    - Parameter: context, icon, text, onTap
+
+37. _buildFeatureItem (method)
+    - Fungsi: Helper method untuk feature items di About screen
+    - Lokasi: AboutScreen
+    - Parameter: icon, title, description
+
+38. _buildInfoRow (method)
+    - Fungsi: Helper method untuk info rows di Product detail
+    - Lokasi: ProductDetailScreen
+    - Parameter: label, value
+
+================================================================================
+MODEL DATA (DATA MODELS)
+================================================================================
+
+39. Product (class)
+    - Fungsi: Model data untuk produk
+    - Lokasi: models.dart
+    - Properties: name, icon, price, imageUrl
+
+40. Category (class)
+    - Fungsi: Model data untuk kategori produk
+    - Lokasi: models.dart
+    - Properties: name, icon, products (list of Product)
+
+================================================================================
+CATATAN PENTING
+================================================================================
+
+- Aplikasi menggunakan responsive design dengan MediaQuery untuk mendukung mobile dan desktop
+- Tema warna konsisten menggunakan Theme.of(context).primaryColor
+- Navigasi menggunakan Navigator.push() untuk perpindahan halaman
+- State management sederhana menggunakan StatefulWidget untuk favorites
+- Asset images disimpan di folder assets/images/
+- Gradient background digunakan untuk estetika visual
+- Card dengan elevation dan shadow untuk depth perception
+- Empty states ditambahkan untuk UX yang lebih baik
+
+================================================================================
+TEKNOLOGI YANG DIGUNAKAN
+================================================================================
+
+- Framework: Flutter
+- Language: Dart
+- UI Components: Material Design
+- State Management: Built-in Flutter state management
+- Assets: Images dalam folder assets/
+- Responsive: MediaQuery untuk multi-device support
+
+Dokumentasi ini mencakup semua widget utama yang digunakan dalam pengembangan aplikasi MyShop Mini. Setiap widget memiliki peran spesifik dalam membangun UI yang responsif dan user-friendly.
