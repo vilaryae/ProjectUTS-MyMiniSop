@@ -1,6 +1,6 @@
 # myshopmini
 
-A new Flutter project.
+Untuk informasi widget yang saya gunakan ada di file INFORMASIapp.txt 
 
 ## Getting Started
 
